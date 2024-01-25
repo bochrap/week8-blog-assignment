@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(176, 185, 233);
+}
+
+/* HEADER STYLING */
+header {
+  padding: 1rem;
+  border-bottom: 3px solid rgb(71, 97, 198);
+  height: 15vh;
+  display: flex;
+  align-items: center;
+}
+
+#page-title h1 {
+  margin: 0;
+  padding: 0;
+}
+
+#page-title p {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+header a {
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  padding: 3px;
+  border-radius: 8px;
+}
+
+#sighting {
+  width: 200px;
+  height: 250px;
+  border: 1px solid black;
+}

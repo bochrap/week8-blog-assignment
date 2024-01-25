@@ -9,13 +9,14 @@ export default async function SightingsPage() {
   return (
     <div>
       <h2>Dog Sightings</h2>
-      <ul>
-        {posts.rows.map((post) => (
-          <Link key={post.id} href={`/sightings/${post.id}`}>
-            <li key={post.id}>{post.name}</li>
-          </Link>
-        ))}
-      </ul>
+
+      {posts.rows.map((post) => (
+        <Link key={post.id} href={`/sightings/${post.id}`}>
+          <div key={post.id} id="sighting">
+            {post.name}
+          </div>
+        </Link>
+      ))}
     </div>
   );
 }
