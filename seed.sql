@@ -9,6 +9,7 @@ CREATE TABLE IF NOT EXISTS sightings (
   location_desc Varchar(255 )NOT NULL,
   notes TEXT,
   photo TEXT,
+  date BIGINT NOT NULL
 )
 
 -- COMMENTS

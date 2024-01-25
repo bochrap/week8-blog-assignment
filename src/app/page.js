@@ -1,3 +1,9 @@
+import SightingsPage from "./components/sightings";
+
 export default function Home() {
-  return <div></div>;
+  return (
+    <div>
+      <SightingsPage />
+    </div>
+  );
 }
