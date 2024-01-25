@@ -1,4 +1,5 @@
 import { sql } from "@vercel/postgres";
+import Link from "next/link";
 
 export default async function SightingsPage() {
   //   const posts = await sql'SELECT * FROM sightings;';
@@ -10,7 +11,9 @@ export default async function SightingsPage() {
       <h2>Dog Sightings</h2>
       <ul>
         {posts.rows.map((post) => (
-          <li key={post.id}>{post.name}</li>
+          <Link key={post.id} href={`/sightings/${post.id}`}>
+            <li key={post.id}>{post.name}</li>
+          </Link>
         ))}
       </ul>
     </div>
