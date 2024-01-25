@@ -1,4 +1,4 @@
-import SightingsPage from "./components/sightings";
+import SightingsPage from "./components/SightingsPage";
 
 export default function Home() {
   return (

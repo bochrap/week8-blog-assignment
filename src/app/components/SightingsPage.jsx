@@ -7,7 +7,7 @@ export default async function SightingsPage() {
   `;
   return (
     <div>
-      <h2>Posts</h2>
+      <h2>Dog Sightings</h2>
       <ul>
         {posts.rows.map((post) => (
           <li key={post.id}>{post.name}</li>
