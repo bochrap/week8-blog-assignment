@@ -10,7 +10,7 @@ export default function Header() {
       <nav>
         <Link href={"/"}>REPORT</Link>
         <Link href={"/"}>HOME</Link>
-        <Link href={"/"}>BROWSE</Link>
+        <Link href={"/sightings"}>BROWSE</Link>
       </nav>
       <hr />
     </header>

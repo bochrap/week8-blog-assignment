@@ -1,9 +1,9 @@
-import SightingsPage from "./components/SightingsPage";
+import HomePage from "./HomePage/page";
 
 export default function Home() {
   return (
     <div>
-      <SightingsPage />
+      <HomePage />
     </div>
   );
 }
