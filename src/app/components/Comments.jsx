@@ -1,5 +1,4 @@
 import { sql } from "@vercel/postgres";
-import { Libre_Barcode_128 } from "next/font/google";
 
 export default async function Comments({ id }) {
   const comments = await sql`

@@ -1,5 +1,5 @@
-// import { revalidatePath } from "next/cache";
-// import { redirect } from "next/navigation";
+import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
 import { sql } from "@vercel/postgres";
 
 export default function Report() {
@@ -20,8 +20,8 @@ export default function Report() {
 
     // console.log(name, date, is_truename, looks, was_happy, postcode, location_desc, notes, picture_url);
 
-    revalidatePath("/");
-    redirect("/sightings");
+    revalidatePath(`/sightings`);
+    redirect(`/sightings`);
   }
 
   return (
