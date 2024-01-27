@@ -8,11 +8,15 @@ body {
 
 /* HEADER STYLING */
 header {
+  width: 100%;
   padding: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   border-bottom: 3px solid rgb(71, 97, 198);
   height: 15vh;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 #page-title h1 {
@@ -27,7 +31,7 @@ header {
 
 nav {
   display: flex;
-  gap: 1rem;
+  gap: 4rem;
 }
 
 header a {
@@ -39,7 +43,7 @@ header a {
 }
 
 #sighting {
-  width: 200px;
-  height: 250px;
+  /* width: 200px;
+  height: 250px; */
   border: 1px solid black;
 }

@@ -8,11 +8,10 @@ export default function Header() {
         <p>(Unidentified Wagging Object)</p>
       </div>
       <nav>
-        <Link href={"/"}>REPORT</Link>
+        <Link href={"/report"}>REPORT</Link>
         <Link href={"/"}>HOME</Link>
         <Link href={"/sightings"}>BROWSE</Link>
       </nav>
-      <hr />
     </header>
   );
 }

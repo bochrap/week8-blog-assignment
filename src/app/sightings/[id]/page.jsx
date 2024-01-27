@@ -1,10 +1,10 @@
 import { sql } from "@vercel/postgres";
 import Comments from "@/app/components/Comments";
-import Image from "next/image";
 
 export default async function SingleSighting({ params }) {
   const post = await sql`
     SELECT * FROM sightings WHERE id = ${params.id}`;
+  console.log(post);
   return (
     <div>
       <div>
@@ -17,7 +17,7 @@ export default async function SingleSighting({ params }) {
         <p>Notes: {post.rows[0].notes}</p>
         <p>When: {post.rows[0].date}</p>
       </div>
-      <Comments />
+      <Comments id={post.rows[0].id} />
     </div>
   );
 }
