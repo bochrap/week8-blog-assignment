@@ -1,7 +1,9 @@
 import { sql } from "@vercel/postgres";
 import Comments from "@/app/components/Comments";
+import { revalidatePath } from "next/cache";
 
 export default async function SingleSighting({ params }) {
+  revalidatePath("/");
   const post = await sql`
     SELECT * FROM sightings WHERE id = ${params.id}`;
   console.log(post);
