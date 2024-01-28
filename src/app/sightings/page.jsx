@@ -1,7 +1,9 @@
 import { sql } from "@vercel/postgres";
 import Link from "next/link";
+import { revalidatePath } from "next/cache";
 
 export default async function SightingsPage() {
+  revalidatePath("/sightings");
   const posts = await sql`
     SELECT * FROM sightings;
   `;

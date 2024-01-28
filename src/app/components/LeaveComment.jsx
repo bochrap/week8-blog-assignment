@@ -16,7 +16,7 @@ export default function LeaveComment({ id }) {
   }
 
   return (
-    <form action={handleReport}>
+    <form name="addComment" id="addComment" action={handleReport}>
       <label htmlFor="username">Username</label>
       <input type="text" name="username" id="username" placeholder="Username" required />
 

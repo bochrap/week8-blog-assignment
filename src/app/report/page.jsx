@@ -20,8 +20,8 @@ export default function Report() {
 
     // console.log(name, date, is_truename, looks, was_happy, postcode, location_desc, notes, picture_url);
 
-    revalidatePath(`/sightings`);
-    redirect(`/sightings`);
+    revalidatePath(`/sightings/`);
+    redirect(`/sightings/`);
   }
 
   return (
