@@ -8,7 +8,7 @@ export default async function Comments({ id }) {
       <ul>
         {comments.rows.map((comment) => (
           <li key={comment.id}>
-            {`Username: ${comment.name}, Comment: ${comment.comment}`}
+            {`${comment.name} said: ${comment.comment}`}
             <button>Edit</button>
           </li>
         ))}

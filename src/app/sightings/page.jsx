@@ -15,8 +15,11 @@ export default async function SightingsPage() {
       {posts.rows.map((post) => (
         <Link key={post.id} href={`/sightings/${post.id}`}>
           <div key={post.id} id="sighting">
-            <p>{post.postcode}</p>
-            <p>{post.date}</p>
+            <p>Who: {post.name}</p>
+            <p>
+              Where: {post.postcode}, {post.location_desc}
+            </p>
+            <p>When: {post.date}</p>
           </div>
         </Link>
       ))}
