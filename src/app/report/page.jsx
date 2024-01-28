@@ -1,6 +1,7 @@
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { sql } from "@vercel/postgres";
+import SubmitSightingButton from "../components/SubmitSightingButton";
 
 export default function Report() {
   async function handleReport(formData) {
@@ -26,6 +27,7 @@ export default function Report() {
 
   return (
     <form action={handleReport}>
+      <h2>Seen a Doggo? Tell us!</h2>
       <span>Date of sighting</span>
       <select id="year" name="year" required>
         <option value="" defaultValue>
@@ -169,7 +171,7 @@ export default function Report() {
       <label htmlFor="notes">Notes</label>
       <input type="text" name="notes" id="notes" placeholder="Add notes" />
       <br />
-      <button type="submit">POST</button>
+      <SubmitSightingButton />
     </form>
   );
 }

@@ -1,19 +1,18 @@
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { sql } from "@vercel/postgres";
-import SubmitCommentButton from "./SubmitCommentBtn";
 
-export default function LeaveComment({ id }) {
+export default function EditComment({ id }) {
   async function handleReport(formData) {
     "use server";
 
     const name = formData.get("username");
     const comment = formData.get("comment");
 
-    await sql`INSERT INTO comments (name, comment, sightings_id ) VALUES (${name}, ${comment}, ${id})`;
+    // await sql`INSERT INTO comments (name, comment, sightings_id ) VALUES (${name}, ${comment}, ${id})`;
 
-    revalidatePath(`/sightings/${id}`);
-    redirect(`/sightings/${id}`);
+    // revalidatePath(`/sightings/${id}`);
+    // redirect(`/sightings/${id}`);
   }
 
   return (
@@ -23,7 +22,7 @@ export default function LeaveComment({ id }) {
 
       <label htmlFor="comment">Comment</label>
       <input type="text" name="comment" id="comment" placeholder="Your comment" required />
-      <SubmitCommentButton />
+      <button type="submit">POST</button>
     </form>
   );
 }

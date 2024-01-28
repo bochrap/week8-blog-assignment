@@ -7,7 +7,10 @@ export default async function Comments({ id }) {
     <div>
       <ul>
         {comments.rows.map((comment) => (
-          <li key={comment.id}>{`Username: ${comment.name}, Comment: ${comment.comment}`}</li>
+          <li key={comment.id}>
+            {`Username: ${comment.name}, Comment: ${comment.comment}`}
+            <button>Edit</button>
+          </li>
         ))}
       </ul>
     </div>
