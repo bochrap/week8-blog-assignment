@@ -1,5 +1,6 @@
 import { sql } from "@vercel/postgres";
 import Comments from "@/app/components/Comments";
+import LeaveComment from "@/app/components/LeaveComment";
 import { revalidatePath } from "next/cache";
 
 export default async function SingleSighting({ params }) {
@@ -19,7 +20,9 @@ export default async function SingleSighting({ params }) {
         <p>Notes: {post.rows[0].notes}</p>
         <p>When: {post.rows[0].date}</p>
       </div>
+
       <Comments id={post.rows[0].id} />
+      <LeaveComment id={post.rows[0].id} />
     </div>
   );
 }
